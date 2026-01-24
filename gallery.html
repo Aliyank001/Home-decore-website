@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View our portfolio of completed home décor projects. Browse before and after transformations from Luxe Home Décor.">
+    <title>Gallery - Luxe Home Décor</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+    
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="index.html">
+                        <i class="fas fa-home"></i>
+                        <span>Luxe Home</span>
+                    </a>
+                </div>
+                
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="products.html">Collections</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html" class="active">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                
+                <div class="nav-icons">
+                    <button type="button" class="icon-btn" id="search-btn" aria-label="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <button class="icon-btn" id="cart-btn">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-count">0</span>
+                    </button>
+                    <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="page-header-bg">
+            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1920&q=80" alt="Gallery">
+            <div class="page-header-overlay"></div>
+        </div>
+        <div class="page-header-content">
+            <h1>Our Gallery</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <span>Gallery</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Intro -->
+    <section class="gallery-intro section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Portfolio</span>
+                <h2 class="section-title">Transformations That Inspire</h2>
+                <p class="section-description">Explore our portfolio of completed projects and see how we've transformed spaces into stunning living environments.</p>
+            </div>
+            
+            <div class="gallery-filters">
+                <button type="button" class="gallery-filter-btn active" data-filter="all">All Projects</button>
+                <button type="button" class="gallery-filter-btn" data-filter="living-room">Living Rooms</button>
+                <button type="button" class="gallery-filter-btn" data-filter="bedroom">Bedrooms</button>
+                <button type="button" class="gallery-filter-btn" data-filter="dining">Dining Rooms</button>
+                <button type="button" class="gallery-filter-btn" data-filter="kitchen">Kitchens</button>
+                <button type="button" class="gallery-filter-btn" data-filter="office">Offices</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="gallery-section section section-alt">
+        <div class="container">
+            <div class="gallery-grid" id="gallery-grid">
+                <!-- Gallery Item 1 -->
+                <div class="gallery-item" data-category="living-room">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&q=80" alt="Modern Living Room">
+                        <div class="gallery-overlay">
+                            <button type="button" class="gallery-btn" data-image="1" aria-label="View Modern Minimalist Living Room">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Modern Minimalist Living Room</h3>
+                        <span class="gallery-category">Living Room</span>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div class="gallery-item" data-category="bedroom">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=800&q=80" alt="Luxury Bedroom">
+                        <div class="gallery-overlay">
+                            <button type="button" class="gallery-btn" data-image="2" aria-label="View Serene Master Bedroom">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Serene Master Bedroom</h3>
+                        <span class="gallery-category">Bedroom</span>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3 -->
+                <div class="gallery-item" data-category="dining">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1617806118233-18e1de247200?w=800&q=80" alt="Elegant Dining Room">
+                        <div class="gallery-overlay">
+                            <button type="button" class="gallery-btn" data-image="3" aria-label="View Elegant Dining Space">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Elegant Dining Space</h3>
+                        <span class="gallery-category">Dining Room</span>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 4 -->
+                <div class="gallery-item" data-category="kitchen">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80" alt="Modern Kitchen">
+                        <div class="gallery-overlay">
+                            <button type="button" class="gallery-btn" data-image="4" aria-label="View Contemporary Kitchen Design">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Contemporary Kitchen Design</h3>
+                        <span class="gallery-category">Kitchen</span>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 5 -->
+                <div class="gallery-item" data-category="office">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=800&q=80" alt="Home Office">
+                        <div class="gallery-overlay">
+                            <button type="button" class="gallery-btn" data-image="5" aria-label="View Productive Home Office">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Productive Home Office</h3>
+                        <span class="gallery-category">Office</span>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 6 -->
+                <div class="gallery-item" data-category="living-room">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=80" alt="Classic Living Room">
+                        <div class="gallery-overlay">
+                            <button type="button" class="gallery-btn" data-image="6" aria-label="View Classic Elegance Living Room">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Classic Elegance Living Room</h3>
+                        <span class="gallery-category">Living Room</span>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 7 -->
+                <div class="gallery-item" data-category="bedroom">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1615529328331-f8917597711f?w=800&q=80" alt="Cozy Bedroom">
+                        <div class="gallery-overlay">
+                            <button type="button" class="gallery-btn" data-image="7" aria-label="View Cozy Scandinavian Bedroom">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Cozy Scandinavian Bedroom</h3>
+                        <span class="gallery-category">Bedroom</span>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 8 -->
+                <div class="gallery-item" data-category="dining">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1615876063107-23ab68fb2d1e?w=800&q=80" alt="Modern Dining">
+                        <div class="gallery-overlay">
+                            <button type="button" class="gallery-btn" data-image="8" aria-label="View Modern Dining Area">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Modern Dining Area</h3>
+                        <span class="gallery-category">Dining Room</span>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 9 -->
+                <div class="gallery-item" data-category="living-room">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80" alt="Bohemian Living">
+                        <div class="gallery-overlay">
+                            <button type="button" class="gallery-btn" data-image="9" aria-label="View Bohemian Chic Living Space">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Bohemian Chic Living Space</h3>
+                        <span class="gallery-category">Living Room</span>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 10 -->
+                <div class="gallery-item" data-category="bedroom">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Luxury Suite">
+                        <div class="gallery-overlay">
+                            <button type="button" class="gallery-btn" data-image="10" aria-label="View Luxury Master Suite">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Luxury Master Suite</h3>
+                        <span class="gallery-category">Bedroom</span>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 11 -->
+                <div class="gallery-item" data-category="kitchen">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?w=800&q=80" alt="Gourmet Kitchen">
+                        <div class="gallery-overlay">
+                            <button type="button" class="gallery-btn" data-image="11" aria-label="View Gourmet Kitchen Remodel">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Gourmet Kitchen Remodel</h3>
+                        <span class="gallery-category">Kitchen</span>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 12 -->
+                <div class="gallery-item" data-category="office">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=800&q=80" alt="Executive Office">
+                        <div class="gallery-overlay">
+                            <button type="button" class="gallery-btn" data-image="12" aria-label="View Executive Home Office">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Executive Home Office</h3>
+                        <span class="gallery-category">Office</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before & After Section -->
+    <section class="before-after section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Transformations</span>
+                <h2 class="section-title">Before & After</h2>
+                <p class="section-description">See the dramatic transformations we've achieved for our clients</p>
+            </div>
+            
+            <div class="ba-grid">
+                <div class="ba-item">
+                    <div class="ba-slider">
+                        <div class="ba-before">
+                            <img src="https://images.unsplash.com/photo-1484101403633-562f891dc89a?w=800&q=80" alt="Before">
+                            <span class="ba-label before-label">Before</span>
+                        </div>
+                        <div class="ba-after">
+                            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&q=80" alt="After">
+                            <span class="ba-label after-label">After</span>
+                        </div>
+                        <input type="range" min="0" max="100" value="50" class="ba-handle" aria-label="Before and after comparison slider for Manhattan Apartment Transformation">
+                    </div>
+                    <div class="ba-info">
+                        <h3>Manhattan Apartment Transformation</h3>
+                        <p>Complete living room redesign with modern furniture and custom lighting</p>
+                    </div>
+                </div>
+                
+                <div class="ba-item">
+                    <div class="ba-slider">
+                        <div class="ba-before">
+                            <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=800&q=80" alt="Before">
+                            <span class="ba-label before-label">Before</span>
+                        </div>
+                        <div class="ba-after">
+                            <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=800&q=80" alt="After">
+                            <span class="ba-label after-label">After</span>
+                        </div>
+                        <input type="range" min="0" max="100" value="50" class="ba-handle" aria-label="Before and after comparison slider for Master Bedroom Makeover">
+                    </div>
+                    <div class="ba-info">
+                        <h3>Master Bedroom Makeover</h3>
+                        <p>Serene bedroom retreat with custom bedding and wall treatments</p>
+                    </div>
+                </div>
+                
+                <div class="ba-item">
+                    <div class="ba-slider">
+                        <div class="ba-before">
+                            <img src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?w=800&q=80" alt="Before">
+                            <span class="ba-label before-label">Before</span>
+                        </div>
+                        <div class="ba-after">
+                            <img src="https://images.unsplash.com/photo-1617806118233-18e1de247200?w=800&q=80" alt="After">
+                            <span class="ba-label after-label">After</span>
+                        </div>
+                        <input type="range" min="0" max="100" value="50" class="ba-handle" aria-label="Before and after comparison slider for Dining Room Elegance">
+                    </div>
+                    <div class="ba-info">
+                        <h3>Dining Room Elegance</h3>
+                        <p>Sophisticated dining space with statement chandelier and art pieces</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section section section-alt">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready for Your Own Transformation?</h2>
+                <p>Let's create something beautiful together</p>
+                <div class="cta-buttons">
+                    <a href="contact.html#consultation" class="btn btn-primary">Book Free Consultation</a>
+                    <a href="services.html" class="btn btn-secondary">View Services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-overlay"></div>
+        <div class="lightbox-content">
+            <button type="button" class="lightbox-close" id="lightbox-close" aria-label="Close lightbox">
+                <i class="fas fa-times"></i>
+            </button>
+            <button type="button" class="lightbox-prev" id="lightbox-prev" aria-label="Previous image">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button type="button" class="lightbox-next" id="lightbox-next" aria-label="Next image">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            <img src="" alt="" id="lightbox-image">
+            <div class="lightbox-caption" id="lightbox-caption"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <i class="fas fa-home"></i>
+                        <span>Luxe Home</span>
+                    </div>
+                    <p>Transform your space with our curated collection of premium home décor and expert interior design services.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="products.html">Collections</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="services.html#interior-styling">Interior Styling</a></li>
+                        <li><a href="services.html#custom-furniture">Custom Furniture</a></li>
+                        <li><a href="services.html#space-planning">Space Planning</a></li>
+                        <li><a href="services.html#installation">Installation Support</a></li>
+                        <li><a href="contact.html#consultation">Free Consultation</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Design Street, NY 10001</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@luxehome.com</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <span>Mon - Sat: 9AM - 6PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Luxe Home Décor. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/15551234567" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Back to Top -->
+    <button type="button" class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/gallery.js"></script>
+</body>
+</html>

@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Luxe Home Décor - Get in touch for consultations, inquiries, or visit our showroom. We're here to help transform your space.">
+    <title>Contact Us - Luxe Home Décor</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+    
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="index.html">
+                        <i class="fas fa-home"></i>
+                        <span>Luxe Home</span>
+                    </a>
+                </div>
+                
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="products.html">Collections</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+                
+                <div class="nav-icons">
+                    <button type="button" class="icon-btn" id="search-btn" aria-label="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <button class="icon-btn" id="cart-btn">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-count">0</span>
+                    </button>
+                    <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="page-header-bg">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=80" alt="Contact Us">
+            <div class="page-header-overlay"></div>
+        </div>
+        <div class="page-header-content">
+            <h1>Contact Us</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <span>Contact</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Info Section -->
+    <section class="contact-info-section section">
+        <div class="container">
+            <div class="contact-info-grid">
+                <div class="contact-info-card">
+                    <div class="contact-info-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Visit Our Showroom</h3>
+                    <p>123 Design Street<br>New York, NY 10001<br>United States</p>
+                </div>
+                
+                <div class="contact-info-card">
+                    <div class="contact-info-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Call Us</h3>
+                    <p>Phone: +1 (555) 123-4567<br>Toll-Free: 1-800-LUXE-HOME<br>Fax: +1 (555) 123-4568</p>
+                </div>
+                
+                <div class="contact-info-card">
+                    <div class="contact-info-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email Us</h3>
+                    <p>General: info@luxehome.com<br>Sales: sales@luxehome.com<br>Support: support@luxehome.com</p>
+                </div>
+                
+                <div class="contact-info-card">
+                    <div class="contact-info-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Business Hours</h3>
+                    <p>Monday - Friday: 9AM - 6PM<br>Saturday: 10AM - 5PM<br>Sunday: Closed</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form & Map Section -->
+    <section class="contact-form-section section section-alt">
+        <div class="container">
+            <div class="contact-wrapper">
+                <!-- Contact Form -->
+                <div class="contact-form-container" id="consultation">
+                    <div class="section-header">
+                        <span class="section-subtitle">Get In Touch</span>
+                        <h2 class="section-title">Send Us A Message</h2>
+                        <p class="section-description">Fill out the form below and we'll get back to you within 24 hours</p>
+                    </div>
+                    
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="service">Service Interest *</label>
+                                <select id="service" name="service" required>
+                                    <option value="">Select a service</option>
+                                    <option value="interior-styling">Interior Styling</option>
+                                    <option value="custom-furniture">Custom Furniture Design</option>
+                                    <option value="space-planning">Space Planning</option>
+                                    <option value="installation">Installation Support</option>
+                                    <option value="consultation">Free Consultation</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Your Message *</label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="newsletter" id="newsletter">
+                                <span>Subscribe to our newsletter for design tips and exclusive offers</span>
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-block">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                        
+                        <div class="form-message" id="form-message"></div>
+                    </form>
+                </div>
+                
+                <!-- Map -->
+                <div class="contact-map-container">
+                    <div class="map-wrapper">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.15830869428!2d-74.119763973046!3d40.69766374874431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1234567890123!5m2!1sen!2s" 
+                            width="100%" 
+                            height="100%" 
+                            allowfullscreen="" 
+                            loading="lazy"
+                            title="Luxe Home Décor Showroom Location Map">
+                        </iframe>
+                    </div>
+                    
+                    <div class="map-info">
+                        <h3>Find Us Here</h3>
+                        <p>Visit our beautiful showroom to experience our collections in person. Our design experts are ready to assist you.</p>
+                        <a href="https://maps.google.com/?q=123+Design+Street,+New+York,+NY+10001" target="_blank" rel="noopener" class="btn btn-secondary">
+                            <i class="fas fa-directions"></i>
+                            Get Directions
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Free Consultation CTA -->
+    <section class="consultation-cta section">
+        <div class="container">
+            <div class="consultation-content">
+                <div class="consultation-text">
+                    <i class="fas fa-gift"></i>
+                    <h2>Book Your Free Consultation</h2>
+                    <p>Let our design experts help you visualize your dream space. Schedule a complimentary 30-minute consultation today!</p>
+                    <ul class="consultation-benefits">
+                        <li><i class="fas fa-check"></i> Personalized design recommendations</li>
+                        <li><i class="fas fa-check"></i> Space planning guidance</li>
+                        <li><i class="fas fa-check"></i> Product and style suggestions</li>
+                        <li><i class="fas fa-check"></i> No obligation required</li>
+                    </ul>
+                </div>
+                <div class="consultation-form">
+                    <h3>Schedule Your Session</h3>
+                    <form id="consultation-form">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Email Address" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Phone Number" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="consultation-date">Preferred Date *</label>
+                            <input type="date" id="consultation-date" name="consultation-date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="consultation-time">Preferred Time *</label>
+                            <select id="consultation-time" name="consultation-time" required>
+                                <option value="">Preferred Time</option>
+                                <option value="morning">Morning (9AM - 12PM)</option>
+                                <option value="afternoon">Afternoon (12PM - 3PM)</option>
+                                <option value="evening">Evening (3PM - 6PM)</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Book Free Consultation</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media & Connect -->
+    <section class="social-connect section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Stay Connected</span>
+                <h2 class="section-title">Follow Our Journey</h2>
+                <p class="section-description">Get daily design inspiration and behind-the-scenes looks at our latest projects</p>
+            </div>
+            
+            <div class="social-grid">
+                <a href="#" class="social-card facebook">
+                    <div class="social-icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </div>
+                    <h3>Facebook</h3>
+                    <p>15K Followers</p>
+                    <span class="social-link">Follow Us</span>
+                </a>
+                
+                <a href="#" class="social-card instagram">
+                    <div class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <h3>Instagram</h3>
+                    <p>28K Followers</p>
+                    <span class="social-link">Follow Us</span>
+                </a>
+                
+                <a href="#" class="social-card pinterest">
+                    <div class="social-icon">
+                        <i class="fab fa-pinterest-p"></i>
+                    </div>
+                    <h3>Pinterest</h3>
+                    <p>12K Followers</p>
+                    <span class="social-link">Follow Us</span>
+                </a>
+                
+                <a href="#" class="social-card twitter">
+                    <div class="social-icon">
+                        <i class="fab fa-twitter"></i>
+                    </div>
+                    <h3>Twitter</h3>
+                    <p>8K Followers</p>
+                    <span class="social-link">Follow Us</span>
+                </a>
+            </div>
+            
+            <div class="whatsapp-cta">
+                <i class="fab fa-whatsapp"></i>
+                <div class="whatsapp-text">
+                    <h3>Chat With Us on WhatsApp</h3>
+                    <p>Get instant responses to your questions</p>
+                </div>
+                <a href="https://wa.me/15551234567" target="_blank" rel="noopener" class="btn btn-primary">
+                    <i class="fab fa-whatsapp"></i> Start Chat
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">FAQs</span>
+                <h2 class="section-title">Frequently Asked Questions</h2>
+            </div>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How do I schedule a consultation?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>You can schedule a consultation by filling out the form above, calling us at +1 (555) 123-4567, or messaging us on WhatsApp. Our team will reach out within 24 hours to confirm your appointment.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What areas do you serve?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We primarily serve the New York metropolitan area, but we also work with clients nationwide. For custom furniture and décor purchases, we offer shipping across the United States and internationally.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Do you offer virtual design services?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! We offer comprehensive virtual design consultations via video call. You'll receive the same personalized service, including mood boards, 3D renderings, and product recommendations.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What is your return policy?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We offer a 30-day return policy for most items. Custom-made furniture and special orders are non-returnable. Please contact our customer service team for specific product return information.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How long does custom furniture take?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Custom furniture typically takes 8-12 weeks from design approval to delivery, depending on the complexity and materials. We'll provide a detailed timeline during your consultation.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Do you offer installation services?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutely! We provide professional installation services for all our products, including furniture assembly, art hanging, and lighting fixture setup. Installation is included with most service packages.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <i class="fas fa-home"></i>
+                        <span>Luxe Home</span>
+                    </div>
+                    <p>Transform your space with our curated collection of premium home décor and expert interior design services.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="products.html">Collections</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="services.html#interior-styling">Interior Styling</a></li>
+                        <li><a href="services.html#custom-furniture">Custom Furniture</a></li>
+                        <li><a href="services.html#space-planning">Space Planning</a></li>
+                        <li><a href="services.html#installation">Installation Support</a></li>
+                        <li><a href="contact.html#consultation">Free Consultation</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Design Street, NY 10001</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@luxehome.com</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <span>Mon - Sat: 9AM - 6PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Luxe Home Décor. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/15551234567" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Back to Top -->
+    <button type="button" class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
