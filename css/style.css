@@ -54,12 +54,26 @@ body {
     line-height: 1.7;
     background-color: var(--bg-white);
     overflow-x: hidden;
+    width: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 img {
     max-width: 100%;
     height: auto;
     display: block;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+/* Prevent horizontal scroll on all elements */
+.hero,
+.section,
+.footer,
+.navbar {
+    overflow-x: hidden;
 }
 
 a {
@@ -87,6 +101,7 @@ button {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 var(--spacing-md);
+    width: 100%;
 }
 
 .section {
@@ -999,6 +1014,30 @@ button {
    Responsive Design
    =================================== */
 
+/* Large Tablets & Small Laptops (1024px - iPad Pro) */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 2rem;
+    }
+    
+    .hero-title {
+        font-size: 4rem;
+    }
+    
+    .categories-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .collection-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Tablets Portrait (992px - iPad) */
 @media (max-width: 992px) {
     .nav-menu {
         position: fixed;
@@ -1011,6 +1050,7 @@ button {
         padding: 6rem 2rem;
         box-shadow: var(--shadow-lg);
         transition: var(--transition-fast);
+        z-index: 1000;
     }
     
     .nav-menu.active {
@@ -1040,15 +1080,59 @@ button {
     .section-title {
         font-size: 2.5rem;
     }
+    
+    .testimonials-grid {
+        padding: 0 1rem;
+    }
 }
 
+/* Small Tablets (820px - iPad Mini) */
+@media (max-width: 820px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+    
+    .hero {
+        min-height: 70vh;
+    }
+    
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.125rem;
+    }
+    
+    .categories-grid,
+    .collection-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .section {
+        padding: 4rem 0;
+    }
+}
+
+/* Phones Landscape & Small Tablets (768px) */
 @media (max-width: 768px) {
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .hero {
+        min-height: 60vh;
+    }
+    
     .hero-title {
         font-size: 2.5rem;
+        line-height: 1.2;
     }
     
     .hero-subtitle {
         font-size: 1rem;
+        margin-bottom: 2rem;
     }
     
     .hero-buttons {
@@ -1056,32 +1140,59 @@ button {
         width: 100%;
         max-width: 300px;
         margin: 0 auto;
+        gap: 1rem;
     }
     
     .btn {
         width: 100%;
+        padding: 1rem 2rem;
     }
     
     .section {
-        padding: var(--spacing-lg) 0;
+        padding: 3rem 0;
     }
     
     .section-title {
         font-size: 2rem;
     }
     
+    .section-subtitle {
+        font-size: 0.875rem;
+    }
+    
     .categories-grid,
     .collection-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .testimonials-slide {
+        padding: 2rem 1.5rem;
+    }
+    
+    .testimonial-text {
+        font-size: 1rem;
     }
     
     .newsletter-content {
         flex-direction: column;
         text-align: center;
+        gap: 1.5rem;
     }
     
     .newsletter-form {
         flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+    }
+    
+    .newsletter-form input,
+    .newsletter-form .btn {
         width: 100%;
     }
     
@@ -1093,6 +1204,12 @@ button {
     .footer-bottom {
         flex-direction: column;
         text-align: center;
+        gap: 1rem;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        gap: 0.75rem;
     }
     
     .whatsapp-float {
@@ -1104,14 +1221,51 @@ button {
     }
     
     .back-to-top {
+        width: 45px;
+        height: 45px;
         bottom: 20px;
         left: 20px;
     }
 }
 
+/* Large Phones (540px) */
+@media (max-width: 540px) {
+    .hero-title {
+        font-size: 2.25rem;
+    }
+    
+    .category-image,
+    .collection-image {
+        height: 280px;
+    }
+    
+    .feature-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+    
+    .nav-menu {
+        width: 280px;
+    }
+}
+
+/* Standard Phones (480px) */
 @media (max-width: 480px) {
+    .hero {
+        min-height: 50vh;
+    }
+    
     .hero-title {
         font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.9375rem;
+    }
+    
+    .section {
+        padding: 2.5rem 0;
     }
     
     .section-title {
@@ -1121,5 +1275,87 @@ button {
     .category-image,
     .collection-image {
         height: 250px;
+    }
+    
+    .category-content h3,
+    .collection-content h3 {
+        font-size: 1.25rem;
+    }
+    
+    .category-content p,
+    .collection-tag {
+        font-size: 0.875rem;
+    }
+    
+    .btn {
+        padding: 0.875rem 1.75rem;
+        font-size: 0.9375rem;
+    }
+    
+    .testimonial-text {
+        font-size: 0.9375rem;
+    }
+    
+    .testimonial-author h4 {
+        font-size: 1rem;
+    }
+    
+    .whatsapp-float,
+    .back-to-top {
+        bottom: 15px;
+    }
+    
+    .whatsapp-float {
+        right: 15px;
+    }
+    
+    .back-to-top {
+        left: 15px;
+    }
+}
+
+/* Small Phones (375px - iPhone SE) */
+@media (max-width: 375px) {
+    .container {
+        padding: 0 0.875rem;
+    }
+    
+    .hero-title {
+        font-size: 1.75rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .category-image,
+    .collection-image {
+        height: 220px;
+    }
+    
+    .nav-menu {
+        width: 260px;
+        padding: 5rem 1.5rem;
+    }
+    
+    .testimonials-slide {
+        padding: 1.5rem 1rem;
+    }
+}
+
+/* Extra Small Phones (360px) */
+@media (max-width: 360px) {
+    .hero-title {
+        font-size: 1.625rem;
+    }
+    
+    .btn {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.875rem;
+    }
+    
+    .category-image,
+    .collection-image {
+        height: 200px;
     }
 }
