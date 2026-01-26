@@ -23,15 +23,15 @@
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="container">
-            <div class="nav-wrapper">
-                <div class="logo">
-                    <a href="index.html">
-                        <i class="fas fa-home"></i>
-                        <span>Luxe Home</span>
-                    </a>
-                </div>
+            <div class="nav-content">
+                <!-- Logo -->
+                <a href="index.html" class="logo">
+                    <i class="fas fa-home"></i>
+                    <span>Luxe Home</span>
+                </a>
                 
-                <ul class="nav-menu" id="nav-menu">
+                <!-- Desktop Menu -->
+                <ul class="nav-links">
                     <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="products.html">Collections</a></li>
@@ -40,15 +40,16 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
                 
-                <div class="nav-icons">
-                    <button type="button" class="icon-btn" id="search-btn" aria-label="Search">
+                <!-- Right Side -->
+                <div class="nav-right">
+                    <a href="#" class="nav-icon">
                         <i class="fas fa-search"></i>
-                    </button>
-                    <button type="button" class="icon-btn" id="cart-btn" aria-label="Shopping cart">
+                    </a>
+                    <a href="#" class="nav-icon cart-icon">
                         <i class="fas fa-shopping-bag"></i>
-                        <span class="cart-count">0</span>
-                    </button>
-                    <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+                        <span class="cart-badge">0</span>
+                    </a>
+                    <button class="hamburger" id="hamburger" aria-label="Open menu">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -57,6 +58,25 @@
             </div>
         </div>
     </nav>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-header">
+            <span class="mobile-menu-title">Menu</span>
+            <button class="close-menu" id="close-menu" aria-label="Close menu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul class="mobile-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="products.html">Collections</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+    <div class="overlay" id="overlay"></div>
 
     <!-- Hero Section -->
     <section class="hero">

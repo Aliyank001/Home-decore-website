@@ -4,7 +4,6 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     initProductFilters();
-    initColorFilters();
     initSortFilter();
     initQuickView();
     initWishlist();
@@ -52,44 +51,6 @@ function initProductFilters() {
 }
 
 // ===================================
-// Color Filter
-// ===================================
-
-function initColorFilters() {
-    const colorButtons = document.querySelectorAll('.color-btn');
-    const products = document.querySelectorAll('.product-card');
-    const productCount = document.getElementById('product-count');
-    
-    if (colorButtons.length === 0) return;
-    
-    colorButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const color = this.getAttribute('data-color');
-            
-            // Update active state
-            colorButtons.forEach(btn => btn.classList.remove('active'));
-            this.classList.add('active');
-            
-            // Filter products
-            let visibleCount = 0;
-            products.forEach(product => {
-                const productColor = product.getAttribute('data-color');
-                
-                if (color === 'all' || productColor === color) {
-                    if (product.style.display !== 'none') {
-                        visibleCount++;
-                    }
-                    product.style.opacity = '1';
-                    product.style.pointerEvents = 'auto';
-                } else {
-                    product.style.opacity = '0.3';
-                    product.style.pointerEvents = 'none';
-                }
-            });
-        });
-    });
-}
-
 // ===================================
 // Sort Filter
 // ===================================

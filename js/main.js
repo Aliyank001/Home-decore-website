@@ -39,34 +39,39 @@ function initNavbar() {
 // ===================================
 
 function initMobileMenu() {
-    const menuToggle = document.getElementById('menu-toggle');
-    const navMenu = document.getElementById('nav-menu');
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const closeMenu = document.getElementById('close-menu');
+    const overlay = document.getElementById('overlay');
+    const mobileLinks = document.querySelectorAll('.mobile-links a');
     
-    if (!menuToggle || !navMenu) return;
+    if (!hamburger || !mobileMenu || !overlay) return;
     
-    menuToggle.addEventListener('click', function() {
-        menuToggle.classList.toggle('active');
-        navMenu.classList.toggle('active');
+    // Open menu
+    hamburger.addEventListener('click', function() {
+        hamburger.classList.add('active');
+        mobileMenu.classList.add('active');
+        overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
     });
     
-    // Close menu when clicking outside
-    document.addEventListener('click', function(event) {
-        const isClickInsideMenu = navMenu.contains(event.target);
-        const isClickOnToggle = menuToggle.contains(event.target);
-        
-        if (!isClickInsideMenu && !isClickOnToggle && navMenu.classList.contains('active')) {
-            menuToggle.classList.remove('active');
-            navMenu.classList.remove('active');
-        }
-    });
+    // Close menu
+    function closeMobileMenu() {
+        hamburger.classList.remove('active');
+        mobileMenu.classList.remove('active');
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+    }
     
-    // Close menu when clicking on a link
-    const navLinks = navMenu.querySelectorAll('a');
-    navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            menuToggle.classList.remove('active');
-            navMenu.classList.remove('active');
-        });
+    if (closeMenu) {
+        closeMenu.addEventListener('click', closeMobileMenu);
+    }
+    
+    overlay.addEventListener('click', closeMobileMenu);
+    
+    // Close when clicking link
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', closeMobileMenu);
     });
 }
 
