@@ -9,15 +9,20 @@
     <meta name="keywords" content="home decor, interior design, furniture, wall art, lighting, luxury home">
     <title>Luxe Home Décor - Transform Your Space with Timeless Elegance</title>
 
-    <!-- Fonts -->
+    <!-- Preload Critical CSS -->
+    <link rel="preload" href="css/style.css" as="style">
+    
+    <!-- Fonts with display swap for faster rendering -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"></noscript>
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Font Awesome - Defer Loading -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
@@ -54,7 +59,7 @@
                         <i class="fas fa-shopping-bag"></i>
                         <span class="cart-badge">0</span>
                     </a>
-                    <button class="hamburger" id="hamburger" aria-label="Open menu">
+                    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -65,14 +70,8 @@
     </nav>
 
     <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobile-menu">
-        <div class="mobile-menu-header">
-            <span class="mobile-menu-title">Menu</span>
-            <button class="close-menu" id="close-menu" aria-label="Close menu">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-        <ul class="mobile-links">
+    <div class="mobile-nav" id="mobileNav">
+        <ul class="mobile-nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="products.html">Collections</a></li>
@@ -81,13 +80,13 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </div>
-    <div class="overlay" id="overlay"></div>
+    <div class="menu-overlay" id="menuOverlay"></div>
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-bg">
             <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1920&q=80" alt="Luxury Interior"
-                class="hero-image">
+                class="hero-image" loading="eager" fetchpriority="high">
             <div class="hero-overlay"></div>
         </div>
 
@@ -120,7 +119,7 @@
             <div class="categories-grid">
                 <div class="category-card">
                     <div class="category-image">
-                        <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80" alt="Furniture">
+                        <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80" alt="Furniture" loading="lazy">
                         <div class="category-overlay">
                             <a href="products.html?category=furniture" class="category-link">
                                 <span>Explore</span>
@@ -138,7 +137,7 @@
                 <div class="category-card">
                     <div class="category-image">
                         <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=800&q=80"
-                            alt="Wall Art">
+                            alt="Wall Art" loading="lazy">
                         <div class="category-overlay">
                             <a href="products.html?category=wall-art" class="category-link">
                                 <span>Explore</span>
@@ -156,7 +155,7 @@
                 <div class="category-card">
                     <div class="category-image">
                         <img src="https://images.unsplash.com/photo-1524484485831-a92ffc0de03f?w=800&q=80"
-                            alt="Lighting">
+                            alt="Lighting" loading="lazy">
                         <div class="category-overlay">
                             <a href="products.html?category=lighting" class="category-link">
                                 <span>Explore</span>
@@ -174,7 +173,7 @@
                 <div class="category-card">
                     <div class="category-image">
                         <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&q=80"
-                            alt="Curtains">
+                            alt="Curtains" loading="lazy">
                         <div class="category-overlay">
                             <a href="products.html?category=curtains" class="category-link">
                                 <span>Explore</span>
@@ -204,7 +203,7 @@
                 <div class="collection-item">
                     <div class="collection-image">
                         <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80"
-                            alt="Modern Minimalist">
+                            alt="Modern Minimalist" loading="lazy">
                     </div>
                     <div class="collection-content">
                         <span class="collection-tag">New Arrival</span>
@@ -218,7 +217,7 @@
                 <div class="collection-item">
                     <div class="collection-image">
                         <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=80"
-                            alt="Classic Elegance">
+                            alt="Classic Elegance" loading="lazy">
                     </div>
                     <div class="collection-content">
                         <span class="collection-tag">Trending</span>
@@ -232,7 +231,7 @@
                 <div class="collection-item">
                     <div class="collection-image">
                         <img src="https://images.unsplash.com/photo-1615529182904-14819c35db37?w=800&q=80"
-                            alt="Bohemian Chic">
+                            alt="Bohemian Chic" loading="lazy">
                     </div>
                     <div class="collection-content">
                         <span class="collection-tag">Popular</span>
@@ -307,7 +306,7 @@
                             into a magazine-worthy space. The attention to detail and quality of products exceeded all
                             expectations."</p>
                         <div class="testimonial-author">
-                            <img src="https://i.pravatar.cc/100?img=1" alt="Sarah Johnson">
+                            <img src="https://i.pravatar.cc/100?img=1" alt="Sarah Johnson" loading="lazy">
                             <div>
                                 <h4>Sarah Johnson</h4>
                                 <span>New York, NY</span>
@@ -327,7 +326,7 @@
                             vision perfectly and delivered beyond what I imagined. Highly recommend their custom
                             furniture design service!"</p>
                         <div class="testimonial-author">
-                            <img src="https://i.pravatar.cc/100?img=33" alt="Michael Chen">
+                            <img src="https://i.pravatar.cc/100?img=33" alt="Michael Chen" loading="lazy">
                             <div>
                                 <h4>Michael Chen</h4>
                                 <span>Los Angeles, CA</span>
@@ -346,7 +345,7 @@
                         <p class="testimonial-text">"The quality and craftsmanship are exceptional. Every piece tells a
                             story. My home has never looked better, and guests always compliment the décor!"</p>
                         <div class="testimonial-author">
-                            <img src="https://i.pravatar.cc/100?img=5" alt="Emily Rodriguez">
+                            <img src="https://i.pravatar.cc/100?img=5" alt="Emily Rodriguez" loading="lazy">
                             <div>
                                 <h4>Emily Rodriguez</h4>
                                 <span>Miami, FL</span>
@@ -474,7 +473,7 @@
     </button>
 
     <!-- JavaScript -->
-    <script src="js/main.js"></script>
+    <script src="js/main.js" defer></script>
 </body>
 
 </html>

@@ -8,15 +8,21 @@
         content="Learn about Luxe Home Décor - our story, mission, and commitment to transforming spaces with timeless elegance.">
     <title>About Us - Luxe Home Décor</title>
 
-    <!-- Fonts -->
+    <!-- Preload Critical CSS -->
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="preload" href="css/pages.css" as="style">
+    
+    <!-- Fonts with display swap -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"></noscript>
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Font Awesome - Defer -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
@@ -45,18 +51,14 @@
                     <a href="#" class="nav-icon"><i class="fas fa-search"></i></a>
                     <a href="#" class="nav-icon cart-icon"><i class="fas fa-shopping-bag"></i><span
                             class="cart-badge">0</span></a>
-                    <button class="hamburger" id="hamburger"
-                        aria-label="Open menu"><span></span><span></span><span></span></button>
+                    <button class="menu-toggle" id="menuToggle"
+                        aria-label="Toggle menu"><span></span><span></span><span></span></button>
                 </div>
             </div>
         </div>
     </nav>
-    <div class="mobile-menu" id="mobile-menu">
-        <div class="mobile-menu-header">
-            <span class="mobile-menu-title">Menu</span>
-            <button class="close-menu" id="close-menu" aria-label="Close menu"><i class="fas fa-times"></i></button>
-        </div>
-        <ul class="mobile-links">
+    <div class="mobile-nav" id="mobileNav">
+        <ul class="mobile-nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="products.html">Collections</a></li>
@@ -65,7 +67,7 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </div>
-    <div class="overlay" id="overlay"></div>
+    <div class="menu-overlay" id="menuOverlay"></div>
 
     <!-- Page Header -->
     <section class="page-header">
@@ -369,7 +371,7 @@
     </button>
 
     <!-- JavaScript -->
-    <script src="js/main.js"></script>
+    <script src="js/main.js" defer></script>
 </body>
 
 </html>

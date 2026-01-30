@@ -39,39 +39,35 @@ function initNavbar() {
 // ===================================
 
 function initMobileMenu() {
-    const hamburger = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const closeMenu = document.getElementById('close-menu');
-    const overlay = document.getElementById('overlay');
-    const mobileLinks = document.querySelectorAll('.mobile-links a');
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileNav = document.getElementById('mobileNav');
+    const menuOverlay = document.getElementById('menuOverlay');
+    const mobileLinks = document.querySelectorAll('.mobile-nav-links a');
     
-    if (!hamburger || !mobileMenu || !overlay) return;
+    if (!menuToggle || !mobileNav || !menuOverlay) return;
     
-    // Open menu
-    hamburger.addEventListener('click', function() {
-        hamburger.classList.add('active');
-        mobileMenu.classList.add('active');
-        overlay.classList.add('active');
-        document.body.style.overflow = 'hidden';
-    });
-    
-    // Close menu
-    function closeMobileMenu() {
-        hamburger.classList.remove('active');
-        mobileMenu.classList.remove('active');
-        overlay.classList.remove('active');
-        document.body.style.overflow = '';
+    // Toggle menu
+    function toggleMenu() {
+        menuToggle.classList.toggle('active');
+        mobileNav.classList.toggle('active');
+        menuOverlay.classList.toggle('active');
+        
+        if (mobileNav.classList.contains('active')) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
     }
     
-    if (closeMenu) {
-        closeMenu.addEventListener('click', closeMobileMenu);
-    }
+    // Menu toggle click
+    menuToggle.addEventListener('click', toggleMenu);
     
-    overlay.addEventListener('click', closeMobileMenu);
+    // Overlay click closes menu
+    menuOverlay.addEventListener('click', toggleMenu);
     
-    // Close when clicking link
+    // Close menu when link is clicked
     mobileLinks.forEach(link => {
-        link.addEventListener('click', closeMobileMenu);
+        link.addEventListener('click', toggleMenu);
     });
 }
 
